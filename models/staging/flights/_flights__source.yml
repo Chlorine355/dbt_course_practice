@@ -30,5 +30,10 @@ sources:
             period: day
           filter: current_timestamp::date - book_date::date < 30000
         loaded_at_field: book_date::timestamp
+      - name: boarding_passes
+      - name: flights
+      - name: routes
+      - name: ticket_flights
+      - name: tickets
         
 
