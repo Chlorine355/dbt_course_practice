@@ -1,0 +1,34 @@
+sources:
+  - name: demo_src
+    description: Данные из БД об авиаперелетах
+    tables:
+      - name: aircrafts
+        description: Самолётики
+        columns:
+         - name: aircraft_code
+           description: Код модели самолётика
+         - name: model
+           description: Модель самолётика
+         - name: range
+           description: Дальность полета самолётика
+      - name: airports
+        decription: Аэропорты
+      - name: seats
+        decription: Места в самолётиках
+      - name: bookings
+        decription: Бронирования
+        columns:
+          - name: book_ref
+          - name: book_date
+          - name: total_amount
+        freshness: # changed to config in v1.9
+          warn_after:
+            count: 600000
+            period: hour
+          error_after:
+            count: 10000
+            period: day
+          filter: current_timestamp::date - book_date::date < 30000
+        loaded_at_field: book_date::timestamp
+        
+
