@@ -2,7 +2,8 @@
       config(
         materialized = 'incremental',
         incremental_strategy = 'delete+insert',
-        unique_key=['book_ref']
+        unique_key=['book_ref'],
+        tags = ['booking']
         )
 }}
 
