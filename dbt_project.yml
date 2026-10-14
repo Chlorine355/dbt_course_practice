@@ -30,9 +30,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_course_practice:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    +meta:
+      owner: 'ya@abgroup.tech'
+      year_created: 2026
+
 
 seeds:
   dbt_course_practice:
