@@ -1,3 +1,10 @@
 {
-    "dbt.dbtMajorVersion": "v1"
+    "dbt.dbtMajorVersion": "v1",
+    "dbt.perspectiveTheme": "Vintage",
+    "files.associations": {
+        "**/dbt_course_practice/**/*.yaml": "jinja-yaml",
+        "**/dbt_course_practice/**/*.yml": "jinja-yaml",
+        "**/dbt_course_practice/**/*.sql": "jinja-sql",
+        "**/dbt_course_practice/**/docs/**/*.md": "jinja-md"
+    }
 }
